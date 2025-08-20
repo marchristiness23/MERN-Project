@@ -1,0 +1,348 @@
+/* HERO SECTION */
+.service-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+.service-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+  z-index: 0;
+}
+
+.service-hero-overlay {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.service-hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #00f0ff, #ff00c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-logo {
+  width: 200px;
+  margin: 20px 0;
+}
+
+.service-hero-overlay p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.service-section {
+  background: linear-gradient(to bottom, #000000, #001735);
+  color: white;
+  padding: 80px 20px;
+}
+
+.section-header{
+  margin-left: 120px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  background: linear-gradient(to right, #00d0ff, #0560d7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CARDS */
+.service-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+}
+
+.card-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #00ffff22, #ff00ff22);
+  border-radius: 20px;
+  filter: blur(20px);
+  z-index: -1;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.service-card p,
+.garansi-list {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.garansi-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cta-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.cta-button {
+  background: #00f0ff;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0ff;
+  box-shadow: 0 0 15px #00f0ff99;
+  transform: scale(1.05);
+}
+
+.cta-button.alt {
+  background: #ffffff22;
+  color: white;
+  border: 1px solid #00f0ff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none; 
+  display: inline-block; 
+  white-space: nowrap;   
+}
+
+.cta-button.alt:hover {
+  background: #00f0ff;
+  color: black;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-hero-overlay h1,
+.service-hero-overlay p,
+.service-logo {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.service-hero-overlay h1 {
+  animation-delay: 0.3s;
+}
+
+.service-logo {
+  animation-delay: 0.6s;
+}
+
+.service-hero-overlay p {
+  animation-delay: 0.9s;
+}
+
+.service-bg {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+}
+
+.service-hero:hover .service-bg {
+  transform: scale(1.08);
+}
+
+
+/* RESPONSIVE */
+
+/* Mobile: Lebih kecil dari 600px */
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 391px) {
+  .service-section {
+    padding: 40px 10px;
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    height: 100%;
+  }
+
+  .container {
+    padding: 0 15px; 
+    margin-left: -210px; 
+    margin-right: 0; 
+  }
+
+  .section-header {
+    text-align: center; 
+    margin-top: 0;
+    margin-bottom: 20px; 
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding: 0 10px; 
+    margin-left: 60px;
+  }
+
+  .service-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; 
+    padding: 0 10px; 
+    justify-items: center;
+    margin-top: 10px; 
+  }
+
+  .service-card {
+    width: 100%; 
+    max-width: 270px; 
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    text-align: left;
+  }
+
+  .service-card h3 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+
+  .service-card-container .service-card:nth-child(3) {
+    grid-column: span 2; 
+  }
+
+
+  .cta-button-wrapper {
+    margin-top: 15px;
+  }
+
+  .cta-button {
+    font-size: 12px !important;
+    padding: 8px 16px;
+    width: auto;
+    display: inline-block;
+    margin-left: 70px;
+  }
+}
+
+
+
+/* Tablet: Antara 600px dan 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+    .service-section {
+    padding: 40px 15px;
+  }
+
+  .service-card-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+  }
+
+  .section-title {
+    font-size: 2rem; 
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem; 
+  }
+  .container{
+    margin-left: -100px;
+  }
+}
+
+/* Desktop: Di atas 900px */
+@media (min-width: 901px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+

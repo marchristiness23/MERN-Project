@@ -1,0 +1,23 @@
+html, body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  color: #fff;
+}
+
+.highlight {
+  color: #1f87ff; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');

@@ -1,0 +1,185 @@
+.footer {
+  background: linear-gradient(to bottom, #001735, #000000);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-logo, .footer-connect, .footer-location {
+  flex: 1;
+  margin: 0 20px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover,
+.footer-connect:hover,
+.footer-location:hover {
+  transform: translateY(-5px);
+}
+
+.footer-logo img {
+  width: 350px;
+  transition: filter 0.3s ease;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+}
+
+.footer-logo img:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+}
+
+.business-hours p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.footer-connect h3,
+.footer-location h3 {
+  font-size: 1.3rem; 
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.footer-connect h3::after,
+.footer-location h3::after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+}
+
+.footer-connect p {
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.social-icons img {
+  width: 55px;
+  margin-top: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: brightness(1.2) drop-shadow(0 0 5px #fff);
+}
+
+.footer-location img {
+  width: 90px;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.footer-location img:hover {
+  transform: scale(1.05);
+}
+
+.footer-text {
+  margin-top: -40px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.footer-location p {
+  margin-top: 50px;
+  font-size: 1rem;
+}
+
+/* Responsif - Mobile view */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .footer-logo, .footer-connect, .footer-location {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+
+  .footer-logo img {
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  .footer-connect h3,
+  .footer-location h3 {
+    font-size: 1.1rem; 
+  }
+
+  .footer-connect p,
+  .footer-location p {
+    font-size: 0.9rem; 
+  }
+
+  .social-icons {
+    gap: 30px;
+  }
+
+  .social-icons img {
+    width: 40px; 
+    margin-top: 35px;
+  }
+
+  .footer-location img {
+    width: 70px;
+  }
+
+  .footer-text {
+    font-size: 0.8rem; 
+    }
+
+  .business-hours p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-location p {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-logo img {
+    width: 250px;
+  }
+
+  .footer-connect h3,
+  .footer-location h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer-connect p,
+  .footer-location p {
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    gap: 50px;
+  }
+}

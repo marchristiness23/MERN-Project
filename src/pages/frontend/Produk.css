@@ -1,0 +1,450 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #0e0e0e, #1f2a40);
+  color: #fff;
+}
+
+.produk-section {
+  overflow-x: hidden;
+}
+
+.produk-banner {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.produk-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.produk-banner-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+}
+
+.produk-logo {
+  width: 220px;
+  max-width: 80%;
+  margin-bottom: 12px;
+}
+
+.produk-banner-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  max-width: 90%;
+}
+
+.produk-title {
+  text-align: center;
+  font-size: 2.3rem;
+  margin: 50px 0 10px;
+}
+
+.kategori-title {
+  font-size: 1.7rem;
+  color: #00e6e6;
+  text-align: center;
+  margin: 40px 0 20px;
+  border-bottom: 2px solid #00c3ff;
+  display: inline-block;
+}
+
+.produk-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 30px 80px;
+}
+
+.produk-card {
+  width: 280px;
+  background: #1e1e1e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.produk-card:hover {
+  transform: translateY(-8px);
+}
+
+.produk-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.produk-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color:rgba(0, 0, 0, 0.5);;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.slide-button.left {
+  left: 8px;
+}
+
+.slide-button.right {
+  right: 8px;
+}
+
+.produk-card:hover .slide-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.produk-nama {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 12px 0 0;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.produk-harga {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 10px 0;
+}
+
+.harga-asli {
+  color: #e63946;
+  font-size: 0.95rem;
+  text-decoration: line-through;
+}
+
+.harga-diskon {
+  color: #afacac;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.produk-button {
+  margin: 16px auto 20px;
+  background-color: #134386;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.produk-button:hover {
+  background-color: #003366;
+  transition: 0.3s;
+}
+
+
+.kategori-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 60px 0 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.kategori-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #00c2ff;
+  border-radius: 2px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .produk-banner-title {
+    font-size: 1.8rem;
+  }
+
+  .produk-logo {
+    width: 200px;
+  }
+
+  .produk-card {
+    width: 90%;
+  }
+
+  .produk-title {
+    font-size: 2rem;
+  }
+}
+
+
+@media (max-width: 391px) {
+  .produk-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom untuk 2 produk per baris */
+    gap: 16px;
+    padding: 0 15px 60px;
+  }
+
+  .produk-card {
+    width: 100%;
+    background: #1e1e1e;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .produk-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .produk-image-wrapper {
+    width: 100%;
+    height: 160px; 
+  }
+
+  .produk-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .produk-button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    margin: 16px auto 20px;
+  }
+
+  .produk-nama {
+    font-size: 1rem;
+  }
+
+  .produk-harga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 10px 0;
+  }
+
+  .harga-asli {
+    color: #e63946;
+    font-size: 0.85rem;
+    text-decoration: line-through;
+  }
+
+  .harga-diskon {
+    font-size: 1rem;
+  }
+
+  .kategori-title {
+    font-size: 1.3rem;
+    margin: 30px 0;
+  }
+}
+
+
+/* Mobile: Lebih kecil dari 600px */
+@media (max-width: 600px) {
+
+}
+
+/* Tablet: Antara 600px dan 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+  .produk-section {
+    padding: 40px 20px; 
+  }
+
+  .produk-title {
+    font-size: 2rem; 
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .kategori-title {
+    font-size: 1.6rem;
+    color: #00e6e6;
+    text-align: center;
+    margin: 30px 0;
+    border-bottom: 2px solid #00c3ff;
+    display: inline-block;
+  }
+
+  .produk-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Menampilkan 2 produk per baris */
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .produk-card {
+    width: 100%; 
+    background: #1e1e1e;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .produk-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .produk-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .produk-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .slide-button.left {
+    left: 8px;
+  }
+
+  .slide-button.right {
+    right: 8px;
+  }
+
+  .produk-card:hover .slide-button {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .produk-nama {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 12px 0 0;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  .produk-harga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 10px 0;
+  }
+
+  .harga-asli {
+    color: #e63946;
+    font-size: 0.95rem;
+    text-decoration: line-through;
+  }
+
+  .harga-diskon {
+    color: #afacac;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .produk-button {
+    margin: 16px auto 20px;
+    background-color: #134386;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+
+  .produk-button:hover {
+    background-color: #003366;
+  }
+}
+
+
+/* Desktop: Di atas 900px */
+@media (min-width: 901px) {
+
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
